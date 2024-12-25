@@ -2,7 +2,7 @@
  Automated Document Categorization and Summarization
 
 This repository provides a solution for automating the categorization and summarization of documents at Appian Credit Union. The project leverages state-of-the-art OCR, machine learning, and deep learning techniques to process thousands of daily incoming PDFs and images efficiently.
-![Alt text](title.png)
+![Alt text](title.jpeg)
 
 
 # Problem Statement
@@ -53,6 +53,8 @@ PyTorch: Deep learning framework.
 Pandas: Data manipulation.
 
 Scikit-learn: Evaluation and hyperparameter tuning.
+
+![Alt text](workflow.png)
 
 ## Steps and Code Snippets
 
