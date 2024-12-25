@@ -1,5 +1,4 @@
-#![Alt text](logo.webp)
- Automated Document Categorization and Summarization
+# <img src="logo.webp" alt="Alt Text" width="70" height="70">Automated Document Categorization and Summarization
 
 This repository provides a solution for automating the categorization and summarization of documents at Appian Credit Union. The project leverages state-of-the-art OCR, machine learning, and deep learning techniques to process thousands of daily incoming PDFs and images efficiently.
 ![Alt text](title.jpeg)
@@ -54,8 +53,12 @@ Pandas: Data manipulation.
 
 Scikit-learn: Evaluation and hyperparameter tuning.
 
-![Alt text](workflow.png)
+![Alt text](Workflow.png)
 
+## DATA COLLECTION:
+        A dataset consisting of forms in forms of annotations and images has been obtained form an open source library which is being used for this model. However, I am not able to gain access to read the dataset even after trying different methods. The proposed dataset has been created by using individual images and forms and hasnt been trained thoroughly. I will try solving the issue ASAP.
+
+        
 ## Steps and Code Snippets
 
 ### 1. Data Preprocessing
