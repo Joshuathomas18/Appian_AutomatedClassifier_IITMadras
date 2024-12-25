@@ -50,12 +50,14 @@ Scikit-learn: Evaluation and hyperparameter tuning.
 
 ## Steps and Code Snippets
 
-1. Data Preprocessing
+### 1. Data Preprocessing
 
 Preprocess the images and PDFs to improve OCR accuracy.
 
 import cv2
-
+<pre>
+<strong style="background-color:#2d2d2d; color:#ffffff; padding: 8px; border-radius: 6px;">📄 main.py</strong>
+<code>
 def preprocess_image(image_path):
     image = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
     image = cv2.threshold(image, 128, 255, cv2.THRESH_BINARY)[1]
@@ -64,11 +66,15 @@ def preprocess_image(image_path):
 
 preprocessed_image = preprocess_image("sample_image.png")
 cv2.imwrite("preprocessed_image.png", preprocessed_image)
+</code>
+</pre>
 
-2. Text Extraction
+### 2. Text Extraction
 
 Extract text from preprocessed images using Tesseract OCR.
-
+<pre>
+<strong style="background-color:#2d2d2d; color:#ffffff; padding: 8px; border-radius: 6px;">📄 main.py</strong>
+<code>
 import pytesseract
 from pytesseract import Output
 
@@ -78,11 +84,15 @@ def extract_text(image_path):
 
 text = extract_text("preprocessed_image.png")
 print(text)
+</code>
+</pre>
 
-3. Document Categorization
+### 3. Document Categorization
 
 Categorize documents using a fine-tuned Transformer model.
-
+<pre>
+<strong style="background-color:#2d2d2d; color:#ffffff; padding: 8px; border-radius: 6px;">📄 main.py</strong>
+<code>
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 import torch
 
@@ -101,10 +111,15 @@ def categorize_document(text):
 category = categorize_document(text)
 print("Document category:", category)
 
-4. Summarization
+</code>
+</pre>
+
+### 4. Summarization
 
 Summarize extracted text for key insights.
-
+<pre>
+<strong style="background-color:#2d2d2d; color:#ffffff; padding: 8px; border-radius: 6px;">📄 main.py</strong>
+<code>
 from transformers import pipeline
 
 # Load summarization pipeline
@@ -116,8 +131,25 @@ def summarize_text(text):
 
 summary = summarize_text(text)
 print("Summary:", summary)
+</code>
+</pre>
 
-5. Evaluation and Optimization
+
+### 5. Evaluation and Optimization
 
 Evaluate the model's performance using classification metrics.
+<pre>
+<strong style="background-color:#2d2d2d; color:#ffffff; padding: 8px; border-radius: 6px;">📄 main.py</strong>
+<code>
+from sklearn.metrics import classification_report
 
+def evaluate_model(y_true, y_pred):
+    report = classification_report(y_true, y_pred, target_names=["Application", "Identity Document", "Financial Document", "Receipt"])
+    print(report)
+
+# Example
+y_true = [0, 1, 2, 3]  # True labels
+y_pred = [0, 1, 2, 3]  # Predicted labels
+evaluate_model(y_true, y_pred)
+</code>
+</pre>
