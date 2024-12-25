@@ -57,6 +57,7 @@ Scikit-learn: Evaluation and hyperparameter tuning.
 
 ## DATA COLLECTION:
         A dataset consisting of forms in forms of annotations and images has been obtained form an open source library which is being used for this model. However, I am not able to gain access to read the dataset even after trying different methods. The proposed dataset has been created by using individual images and forms and hasnt been trained thoroughly. I will try solving the issue ASAP.
+https://arxiv.org/abs/1905.13538 This is the link for the dataset.
 
         
 ## Steps and Code Snippets
